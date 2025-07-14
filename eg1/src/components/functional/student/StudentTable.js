@@ -1,9 +1,9 @@
-export default function StudentTable({students}) {//instead of using props everywhere u can make use of {property]}
+export default function StudentTable({students,color}) {//instead of using props everywhere u can make use of {property]}
   if (students) {
     if (students.length > 0) {
       return (
         <div>
-          <table border={1}>
+          <table style={{backgroundColor:color}} border={1}>
             <thead>
               <tr>
                 <th>Roll No</th>

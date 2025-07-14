@@ -26,7 +26,7 @@ const StudentForm = () => {
         <br/>
         <button>Add Student</button>
       </form>
-      <StudentTable students={students}/>
+      <StudentTable students={students} color="yellow"/>
     </div>
   );
 };
