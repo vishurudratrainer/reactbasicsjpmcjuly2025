@@ -3,10 +3,11 @@ import Counter from "./functional/Counter";
 import Calculator from "./functional/Calculator";
 import StudentForm from "./functional/student/StudentForm";
 import NavEg from "./functional/nav/NavEg";
+import Login from "./login/Login";
 export default function Nav() {
   return (
     <div>
-      <Link to="/">Home</Link>
+      <Link to="/">Login</Link>
       <br />
       <Link to="/calculator">Calculator</Link>
       <br />
@@ -14,7 +15,7 @@ export default function Nav() {
       <br />
       <Link to="/naveg">Navigation Example</Link>
       <Routes>
-        <Route path="/" element={<Counter />} />
+        <Route path="/" element={<Login />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/studentform" element={<StudentForm />} />
         <Route path="/naveg" element={<NavEg />} />
