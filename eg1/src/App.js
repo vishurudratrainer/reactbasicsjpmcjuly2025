@@ -1,12 +1,12 @@
 import './App.css';
-import StudentForm from './components/functional/student/StudentForm';
+import Nav from './components/Nav';
 
 
 
 function App() {
   return (
     <div className="App">
-      <StudentForm/>
+      <Nav/>
     </div>
   );
 }
