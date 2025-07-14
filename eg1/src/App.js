@@ -1,15 +1,12 @@
 import './App.css';
-import Calculator from './components/functional/Calculator';
-import NewCalculator from './components/functional/nonconditional/NewCalculator';
-import Color from './components/props/Color';
+import StudentForm from './components/functional/student/StudentForm';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Color/>
-      <Calculator/>
-      <NewCalculator/>
+      <StudentForm/>
     </div>
   );
 }
