@@ -36,7 +36,7 @@ const StudentForm = () => {
           Enter Name <input name="name" required onChange={capture} />
         </label>
         <br />
-        <button type="submit" disabled={!enableButton}>
+        <button type="submit" disabled={!(formData.name.length >0 && formData.rollNo> -1)}>
           Add Student
         </button>
       </form>
