@@ -1,30 +1,29 @@
-export default function StudentTable(props) {
-  if (props.students) {
-    if (props.students.length > 0) {
+export default function StudentTable({students}) {//instead of using props everywhere u can make use of {property]}
+  if (students) {
+    if (students.length > 0) {
       return (
-        <table border={1}>
-          <thead>
-            <tr>
-              <th>Roll No</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            {props.students.map((student) => (
+        <div>
+          <table border={1}>
+            <thead>
               <tr>
-                <td>{student.rollNo}</td>
-                <td>{student.name}</td>
+                <th>Roll No</th>
+                <th>Name</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {students.map((student) => (
+                <tr>
+                  <td>{student.rollNo}</td>
+                  <td>{student.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       );
     }
-    return (<div>No data</div>)
-  }
-  else
-  {
-        return (<div>No data</div>)
-
+    return <div>No data</div>;
+  } else {
+    return <div>No data</div>;
   }
 }
