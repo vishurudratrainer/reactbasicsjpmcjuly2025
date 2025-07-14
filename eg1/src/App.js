@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/basics/Header';
+import Sample from './components/classeg/Sample';
 
 function App() {
   return (
     <div className="App">
-     <Header/>
+      <Sample/>
     </div>
   );
 }
