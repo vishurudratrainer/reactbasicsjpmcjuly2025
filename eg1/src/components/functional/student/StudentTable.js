@@ -1,9 +1,14 @@
-export default function StudentTable({students,color}) {//instead of using props everywhere u can make use of {property]}
+import { useContext } from "react";
+import UserNameContext from "../../../context/UserNameContext";
+export default function StudentTable({ students, color }) {
+  //instead of using props everywhere u can make use of {property]}
+  const userNameContext = useContext(UserNameContext);
   if (students) {
     if (students.length > 0) {
       return (
         <div>
-          <table style={{backgroundColor:color}} border={1}>
+          <h1>Welcome {userNameContext.username}</h1>
+          <table style={{ backgroundColor: color }} border={1}>
             <thead>
               <tr>
                 <th>Roll No</th>
@@ -22,8 +27,20 @@ export default function StudentTable({students,color}) {//instead of using props
         </div>
       );
     }
-    return <div>No data</div>;
+    return (
+      <div>
+        {" "}
+        <h1>Welcome {userNameContext.username}</h1>
+        No data
+      </div>
+    );
   } else {
-    return <div>No data</div>;
+    return (
+      <div>
+        {" "}
+        <h1>Welcome {userNameContext.username}</h1>
+        No data
+      </div>
+    );
   }
 }

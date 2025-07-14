@@ -1,5 +1,4 @@
 import { Route, Routes, Link } from "react-router-dom";
-import Counter from "./functional/Counter";
 import Calculator from "./functional/Calculator";
 import StudentForm from "./functional/student/StudentForm";
 import NavEg from "./functional/nav/NavEg";

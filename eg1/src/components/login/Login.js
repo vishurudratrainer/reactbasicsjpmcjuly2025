@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import UserNameContext from "../../context/UserNameContext";
+import { useContext } from "react";
 const Login = ({ setAuthenticated }) => {
+    const userNameContext= useContext(UserNameContext)
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const capture = (e) => {
@@ -12,6 +15,7 @@ const Login = ({ setAuthenticated }) => {
     e.preventDefault();
     if (loginData.username === loginData.password) {
       setAuthenticated(true);
+      userNameContext.setUserName(loginData.username)
       navigate("/calculator");
     }
   };
