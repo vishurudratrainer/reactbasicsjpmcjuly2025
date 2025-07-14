@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+const Login = ({ setAuthenticated }) => {
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const capture = (e) => {
@@ -11,6 +11,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (loginData.username === loginData.password) {
+      setAuthenticated(true);
       navigate("/calculator");
     }
   };
