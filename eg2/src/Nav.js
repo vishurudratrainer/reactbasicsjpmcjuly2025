@@ -1,13 +1,16 @@
-import {Routes,Route,Link} from 'react-router-dom'
-import Todos from './Todos'
+import { Routes, Route, Link } from "react-router-dom";
+import Todos from "./Todos";
+import TodosById from "./TodosById";
 
-const Nav =()=>(
-    <div>
-        <Routes>
-            <Route path='/' element={<Todos/>}/>
-        </Routes>
-
-    </div>
-)
-export default Nav
-
+const Nav = () => (
+  <div>
+    <Link to={"/"}>TODOS</Link>
+    <br />
+    <Link to={"/todosbyid"}>TODOS BY ID</Link>
+    <Routes>
+      <Route path="/" element={<Todos />} />
+      <Route path="/todosbyid" element={<TodosById />} />
+    </Routes>
+  </div>
+);
+export default Nav;
