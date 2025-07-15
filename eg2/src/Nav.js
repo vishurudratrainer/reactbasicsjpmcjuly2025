@@ -9,6 +9,7 @@ import TodosMuiId from "./getmui/TodosMuiId";
 import PostMui from "./postmui/PostMui";
 import ResponsiveAppBar from "./appbar/ResponsiveAppBar";
 import AxiosEg from "./axioseg/AxiosEg";
+import AxiosDouble from "./axioseg/AxiosDouble";
 
 const Nav = () => (
   <div>
@@ -22,7 +23,7 @@ const Nav = () => (
       <Route path="/todosmui" element={<TodosMui />} />
       <Route path="/todosidmui" element={<TodosMuiId />} />
       <Route path="/postmui" element={<PostMui />} />
-      <Route path="/axioseg" element={<AxiosEg/>}/>
+      <Route path="/axioseg" element={<AxiosDouble/>}/>
     </Routes>
   </div>
 );
