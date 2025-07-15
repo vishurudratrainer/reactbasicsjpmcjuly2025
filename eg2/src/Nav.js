@@ -7,24 +7,11 @@ import PostDropDown from "./effect/PostDropDown";
 import TodosMui from "./getmui/TodosMui";
 import TodosMuiId from "./getmui/TodosMuiId";
 import PostMui from "./postmui/PostMui";
+import ResponsiveAppBar from "./appbar/ResponsiveAppBar";
 
 const Nav = () => (
   <div>
-    <Link to={"/"}>TODOS</Link>
-    <br />
-    <Link to={"/todosbyid"}>TODOS BY ID</Link>
-    <br />
-    <Link to={"/post"}>POST FORM</Link>
-    <br />
-    <Link to={"/posts"}>POSTS</Link>
-    <br />
-    <Link to={"/postdrop"}>POST DROP DOWN</Link>
-    <br />
-    <Link to={"/todosmui"}>TODOS MUI</Link>
-    <br />
-    <Link to={"/todosidmui"}>TODOS ID MUI</Link>
-    <br />
-    <Link to={"/postmui"}>POST MUI</Link>
+    <ResponsiveAppBar/>
     <Routes>
       <Route path="/" element={<Todos />} />
       <Route path="/todosbyid" element={<TodosById />} />
