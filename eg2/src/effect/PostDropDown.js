@@ -4,7 +4,7 @@ import CommonTable from "../table/CommonTable";
 const PostDropDown = () => {
   const [posts, setPosts] = useState([]);
   const [post, setPost] = useState([]);
-
+ const [loading,setLoading]=useState(false)
   const [comment, setComment] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -13,16 +13,19 @@ const PostDropDown = () => {
   }, []);
   const handlePost = (e) => {
     let postId = e.target.value;
-
-    fetch("https://jsonplaceholder.typicode.com/comments?postId=" + postId)
+    setLoading(true)
+    setTimeout(()=>{ fetch("https://jsonplaceholder.typicode.com/comments?postId=" + postId)
       .then((res) => res.json())
       .then((commentData) => {
         setPost(posts.filter((data) => data.id == postId));
         setComment(commentData);
-      });
+        setLoading(false)
+      });},5000)
+   
   };
   return (
     <div>
+        {loading && <h1>Data is loading</h1>}
       <label>
         Select post
         <select onChange={handlePost}>
