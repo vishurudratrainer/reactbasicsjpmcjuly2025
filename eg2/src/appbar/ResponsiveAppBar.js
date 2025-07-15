@@ -22,16 +22,18 @@ const pages = [
   "TODOS MUI",
   "TODOS ID MUI",
   "POST MUI",
+  "AXIOS"
 ];
 const links = {
-  TODOS: "/",
+  "TODOS": "/",
   "TODOS BY ID": "todosbyid",
   "POST FORM": "post",
-  POSTS: "posts",
+  "POSTS": "posts",
   "POST DROP DOWN": "postdrop",
   "TODOS MUI": "todosmui",
   "TODOS ID MUI": "todosidmui",
   "POST MUI": "postmui",
+  "AXIOS":"axioseg"
 };
 const settings = [];
 
