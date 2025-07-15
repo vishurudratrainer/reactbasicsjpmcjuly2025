@@ -5,6 +5,7 @@ import PostForm from "./post/PostForm";
 import Posts from "./nested/Posts";
 import PostDropDown from "./effect/PostDropDown";
 import TodosMui from "./getmui/TodosMui";
+import TodosMuiId from "./getmui/TodosMuiId";
 
 const Nav = () => (
   <div>
@@ -19,6 +20,8 @@ const Nav = () => (
     <Link to={"/postdrop"}>POST DROP DOWN</Link>
     <br />
     <Link to={"/todosmui"}>TODOS MUI</Link>
+    <br />
+    <Link to={"/todosidmui"}>TODOS ID MUI</Link>
     <Routes>
       <Route path="/" element={<Todos />} />
       <Route path="/todosbyid" element={<TodosById />} />
@@ -26,6 +29,7 @@ const Nav = () => (
       <Route path="/posts" element={<Posts />} />
       <Route path="/postdrop" element={<PostDropDown />} />
       <Route path="/todosmui" element={<TodosMui />} />
+      <Route path="/todosidmui" element={<TodosMuiId />} />
     </Routes>
   </div>
 );
