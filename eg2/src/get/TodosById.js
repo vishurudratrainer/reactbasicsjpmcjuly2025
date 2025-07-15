@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodosTable from "./TodosTable";
+import TodosTable from "../table/TodosTable";
 
 
 const TodosById =()=>{
