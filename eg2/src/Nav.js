@@ -3,6 +3,7 @@ import Todos from "./get/Todos";
 import TodosById from "./get/TodosById";
 import PostForm from "./post/PostForm";
 import Posts from "./nested/Posts";
+import PostDropDown from "./effect/PostDropDown";
 
 const Nav = () => (
   <div>
@@ -13,11 +14,15 @@ const Nav = () => (
     <Link to={"/post"}>POST FORM</Link>
     <br />
     <Link to={"/posts"}>POSTS</Link>
+        <br />
+    <Link to={"/postdrop"}>POST DROP DOWN</Link>
     <Routes>
       <Route path="/" element={<Todos />} />
       <Route path="/todosbyid" element={<TodosById />} />
       <Route path="/post" element={<PostForm />} />
       <Route path="/posts" element={<Posts />} />
+        <Route path="/postdrop" element={<PostDropDown />} />
+
     </Routes>
   </div>
 );
