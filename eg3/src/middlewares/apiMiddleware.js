@@ -1,4 +1,4 @@
-import { ADD_POST, FETCH_TODO, POST_SAVED, FETCHED_TODO } from "../components/ActionType";
+import { ADD_POST, FETCH_TODO, POST_SAVED, FETCHED_TODO, GOT_DOG, GET_DOG } from "../components/ActionType";
 
 const apiMiddlware =
   ({ dispatch }) =>
@@ -9,6 +9,11 @@ const apiMiddlware =
         fetch("https://jsonplaceholder.typicode.com/todos/")
           .then((res) => res.json())
           .then((res) => dispatch({ type: FETCHED_TODO, data: res }));
+      }
+           if (action.type === GET_DOG) {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((res) => res.json())
+          .then((res) => dispatch({ type: GOT_DOG, data: res }));
       }
 
       if (action.type === ADD_POST) {
