@@ -1,17 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
-
+import {ADD_POST,CAPTURE_FORM} from "./ActionType"
 const PostForm = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.post);
  const sendFormData =e =>{
     let name = e.target.name
     let value =e.target.value
-    dispatch({type:"CAPTURE_FORM",data:{[name]:value}})
+    dispatch({type:CAPTURE_FORM,data:{[name]:value}})
  }
 
  const addPost =(e)=>{
     e.preventDefault()
-    dispatch({type:"ADD_POST",formData:data.formData})
+    dispatch({type:ADD_POST,formData:data.formData})
  }
   return (
     <div>
