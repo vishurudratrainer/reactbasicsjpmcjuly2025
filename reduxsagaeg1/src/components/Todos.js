@@ -7,8 +7,8 @@ const Todos = ()=>{
     const fetchTodo=()=>dispatch({type:"FETCH_TODO"})
 
     return(<div>
-        <button onClick={fetchTodo}> FETCH TODOS</button>
-        <h1>{JSON.stringify(data)}</h1>
+        <button id="fetchtodo" onClick={fetchTodo}> FETCH TODOS</button>
+        <h1 id="todooutput">{JSON.stringify(data)}</h1>
     </div>)
 }
 
