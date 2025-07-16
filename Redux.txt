@@ -1,0 +1,11 @@
+Redux:
+third party framework
+specialized in state management
+
+Redux --UI (React/HTML)
+Terminologies
+action---->javascript object---type
+    trigger action(dispatch)                             based existing state and action decide next state
+UI (React)---->middlewares(processing units)--->Reducer(pure function state)------UI
+
+redux react---react-redux
