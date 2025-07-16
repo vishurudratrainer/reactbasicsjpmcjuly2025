@@ -12,7 +12,6 @@ const Nav = () => {
       <br />
       <Link to={"/post"}>Post</Link>
       <br />
-      <br />
       <Link to={"/dog"}>Dog</Link>
       <br />
       <Routes>
