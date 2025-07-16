@@ -1,4 +1,4 @@
-import { INC,DEC } from "../components/ActionType";
+import { INC,DEC } from "../ActionType";
 const CounterReducer = (state = { counter: 0 }, action) => {
   if (action) {
     // eslint-disable-next-line default-case

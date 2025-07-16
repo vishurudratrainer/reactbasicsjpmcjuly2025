@@ -1,5 +1,5 @@
 
-import { FETCHED_TODO } from "../components/ActionType"
+import { FETCHED_TODO } from "../ActionType"
 const TodosReducer=(state={todos:[]},action)=>{
     if(action){
         if(action.type ===FETCHED_TODO){

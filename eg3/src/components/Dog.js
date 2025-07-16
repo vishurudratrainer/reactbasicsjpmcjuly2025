@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { GET_DOG } from "./ActionType";
+import { GET_DOG } from "../ActionType";
 
 
 const Dog =()=>{

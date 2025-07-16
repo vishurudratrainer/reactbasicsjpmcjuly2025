@@ -1,5 +1,5 @@
 
-import { ADD_POST, CAPTURE_FORM,POST_SAVED } from "../components/ActionType"
+import { ADD_POST, CAPTURE_FORM,POST_SAVED } from "../ActionType"
 const PostReducer  =(state={formData:{title:"",body:"",userId:""},res:{},loading:false},action)=>{
     if(action){
         if(action.type ===CAPTURE_FORM){

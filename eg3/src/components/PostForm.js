@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import {ADD_POST,CAPTURE_FORM} from "./ActionType"
+import {ADD_POST,CAPTURE_FORM} from "../ActionType"
 const PostForm = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.post);

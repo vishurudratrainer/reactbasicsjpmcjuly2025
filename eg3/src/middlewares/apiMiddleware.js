@@ -1,4 +1,4 @@
-import { ADD_POST, FETCH_TODO, POST_SAVED, FETCHED_TODO, GOT_DOG, GET_DOG } from "../components/ActionType";
+import { ADD_POST, FETCH_TODO, POST_SAVED, FETCHED_TODO, GOT_DOG, GET_DOG } from "../ActionType";
 
 const apiMiddlware =
   ({ dispatch }) =>
