@@ -9,3 +9,9 @@ action---->javascript object---type
 UI (React)---->middlewares(processing units)--->Reducer(pure function state)------UI
 
 redux react---react-redux
+
+Redux saga --middleware
+this middleware ---very memory friendly(less memory occupying)
+makes use of special type of function generatorfunctions
+
+generator functions ---> loaded in memory only when called
