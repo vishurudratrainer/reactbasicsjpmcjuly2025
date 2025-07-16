@@ -1,13 +1,18 @@
+import { Routes, Route, Link } from "react-router-dom";
+import Todos from "../components/Todos";
+import Dog from "../components/Dog";
+const Nav = () => {
+  return (
+    <div>
+      <Link to={"/"}>Todos</Link>
+      <br />
+      <Link to={"/dog"}>Dog</Link>
 
-import {Routes,Route,Link} from 'react-router-dom'
-import Todos from '../components/Todos'
-const Nav =()=>{
-    return(<div>
-        <Link to={"/"}>Todos</Link>
-        <Routes>
-            <Route path='/' element={<Todos/>}/>
-        </Routes>
-    </div>)
-
-}
-export default Nav
+      <Routes>
+        <Route path="/" element={<Todos />} />
+        <Route path="/dog" element={<Dog />} />
+      </Routes>
+    </div>
+  );
+};
+export default Nav;
