@@ -33,6 +33,7 @@ const PostForm = () => {
         <br />
         <button type="submit">Add Post</button>
       </form>
+      {data.loading && <h1>Loading in progress</h1>}
       <h1>{JSON.stringify(data)}</h1>
     </div>
   );

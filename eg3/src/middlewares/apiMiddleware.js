@@ -1,4 +1,4 @@
-import {ADD_POST,FETCH_TODO,POST_SAVED,FETCHED_TODO} from "./ActionType"
+import { ADD_POST, FETCH_TODO, POST_SAVED, FETCHED_TODO } from "../components/ActionType";
 
 const apiMiddlware =
   ({ dispatch }) =>
@@ -12,16 +12,18 @@ const apiMiddlware =
       }
 
       if (action.type === ADD_POST) {
-        fetch("https://jsonplaceholder.typicode.com/posts", {
-          method: "POST",
-          body: JSON.stringify(action.formData),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-          .then((res) => res.json())
+        setTimeout(() => {
+          fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            body: JSON.stringify(action.formData),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then((res) => res.json())
 
-          .then((res) => dispatch({ type: POST_SAVED, data: res }));
+            .then((res) => dispatch({ type: POST_SAVED, data: res }));
+        }, 5000);
       }
     }
     next(action); //next is used to go to next middleware in chain. If not it will go tot the reducer

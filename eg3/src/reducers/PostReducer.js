@@ -1,6 +1,6 @@
 
-import { CAPTURE_FORM,POST_SAVED } from "../components/ActionType"
-const PostReducer  =(state={formData:{title:"",body:"",userId:""},res:{}},action)=>{
+import { ADD_POST, CAPTURE_FORM,POST_SAVED } from "../components/ActionType"
+const PostReducer  =(state={formData:{title:"",body:"",userId:""},res:{},loading:false},action)=>{
     if(action){
         if(action.type ===CAPTURE_FORM){
             let actionData =action.data
@@ -8,7 +8,10 @@ const PostReducer  =(state={formData:{title:"",body:"",userId:""},res:{}},action
             return {...state,formData:newFormData}
         }
           if(action.type ===POST_SAVED){
-            return {...state,res:action.data}
+            return {...state,res:action.data,loading:false}
+        }
+        if(action.type ===ADD_POST){
+            return {...state,loading:true}
         }
 
 
